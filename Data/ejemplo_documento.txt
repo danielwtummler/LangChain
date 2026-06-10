@@ -1,0 +1,21 @@
+# Introducción a la Generación Aumentada por Recuperación (RAG)
+
+La Inteligencia Artificial ha avanzado a pasos agigantados, pero los Modelos de Lenguaje Grande (LLMs) todavía enfrentan un desafío importante: las "alucinaciones" y la falta de acceso a información privada o actualizada en tiempo real. Aquí es donde entra en juego la arquitectura RAG.
+
+## ¿Qué es RAG?
+La Generación Aumentada por Recuperación (RAG, por sus siglas en inglés) es una técnica que mejora las respuestas de un modelo de lenguaje conectándolo a una base de conocimientos externa. En lugar de depender únicamente de los datos con los que fue entrenado, el modelo primero "busca" información relevante en documentos específicos antes de generar una respuesta.
+
+## ¿Cómo funciona el proceso?
+El flujo de trabajo típico de un sistema RAG se divide en varias etapas clave:
+1. Carga de datos: Se utilizan herramientas como TextLoader para ingerir documentos (PDFs, archivos de texto, bases de datos).
+2. División de texto (Chunking): El texto extenso se corta en fragmentos más pequeños para que sea manejable.
+3. Incrustaciones (Embeddings): Los fragmentos se convierten en vectores matemáticos y se almacenan en una base de datos vectorial.
+4. Recuperación y Generación: Cuando un usuario hace una pregunta, el sistema busca los fragmentos más relevantes y se los pasa al LLM para que construya una respuesta precisa.
+
+## Beneficios principales
+* Reducción de alucinaciones: Las respuestas están ancladas en datos reales y comprobables.
+* Privacidad de datos: Permite a las empresas usar LLMs con su propia información interna sin tener que reentrenar el modelo.
+* Actualización constante: Basta con actualizar la base de datos de documentos para que el modelo tenga la información más reciente.
+
+## Conclusión
+Implementar RAG con herramientas como LangChain democratiza el acceso a aplicaciones de IA altamente personalizadas, seguras y precisas, cambiando la forma en que interactuamos con la información en el entorno empresarial.
